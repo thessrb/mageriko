@@ -10,7 +10,7 @@ class HungryPeopleController < ApplicationController
   # GET /hungry_people/1
   # GET /hungry_people/1.json
   def show
-    session[:user_id] = params[:user_id]
+    session[:hungry_person_id] = params[:hungry_person_id]
   end
 
   # GET /hungry_people/new
