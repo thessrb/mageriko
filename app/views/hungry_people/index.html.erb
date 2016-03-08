@@ -14,7 +14,7 @@
     <% @hungry_people.each do |hungry_person| %>
       <tr>
         <td><%= hungry_person.name %></td>
-        <td><%= link_to 'Show', hungry_person %></td>
+        <td><%= link_to 'Επιλογή', hungry_person %></td>
         <td><%= link_to 'Edit', edit_hungry_person_path(hungry_person) %></td>
         <td><%= link_to 'Destroy', hungry_person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
