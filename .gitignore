@@ -54,3 +54,6 @@ bower.json
 
 # Ignore pow environment settings
 .powenv
+
+# Ignore local rbenv gemsets
+.gems
