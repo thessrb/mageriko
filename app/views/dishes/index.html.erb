@@ -20,3 +20,28 @@
   <%= link_to 'Νέο πιάτο', new_dish_path, class: "btn btn-default"  %>
 
 </div>
+
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Ποιοι πεινάνε στο coho αυτή τη στιγμή</div>
+  <div class="panel-body">
+    <p>Παρακάτω είναι όλοι όσοι πεινάνε στο coho και τι θέλουν να φάνε.</p>
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+    <% @orders.each do |order| %>
+      <tr>
+        <td>
+          <%= order.hungry_person.name %>
+        </td>
+        <td>
+          <%= order.dish.name %>
+        </td>
+        <td>
+          <%= order.quantity %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>
