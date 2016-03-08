@@ -9,11 +9,11 @@ class ApplicationController < ActionController::Base
 private
 
   def current_hungry_person
-    @current_hungry_person ||= HungryPerson.limit(1).where('id = ?', session[:hungry_person_id])
+    @current_hungry_person ||= HungryPerson.where(:id => session[:hungry_person_id])
   end
 
   def require_hungry_person
-    unless current_user
+    unless current_hungry_person
       flash[:notice] = "Πρέπει να επιλέξετε πειναλέο παρακαλώ"
       redirect_to hungry_people_url
       return false
