@@ -1,0 +1,2 @@
+class HungryPerson < ApplicationRecord
+end

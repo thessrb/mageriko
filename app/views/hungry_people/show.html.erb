@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hungry_person.name %>
+</p>
+
+<%= link_to 'Edit', edit_hungry_person_path(@hungry_person) %> |
+<%= link_to 'Back', hungry_people_path %>

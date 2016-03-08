@@ -1,0 +1,2 @@
+module HungryPeopleHelper
+end
